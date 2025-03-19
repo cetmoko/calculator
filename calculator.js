@@ -1,5 +1,4 @@
 const container = document.querySelector('#container');
-container.setAttribute("style", "")
 
 const calculator = {a: "", b: "", operator: "", display: "", op_change: false};
 

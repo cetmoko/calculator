@@ -1,0 +1,31 @@
+#container {
+    display: flex; 
+    height: 550px; 
+    width: 400px; 
+    border: 2px solid black; 
+    margin: auto; 
+    flex-wrap: wrap;
+    gap: 0px 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.display {
+    display: flex;
+    height: 100px;
+    width: 400px;
+    margin: 20px 20px;
+}
+
+button {
+    display: flex;
+    height: 80px;
+    width: 80px;
+    margin: 0px 5px;
+}
+
+.header {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
