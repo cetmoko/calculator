@@ -54,6 +54,9 @@ const get_from_display = function(input) {
         calculator.a = display.textContent;
 
     }
+    else if ((["+", "-", "*", "/"].includes(input)) && (calculator.op_change === true) && (calculator.b === "")) {
+        calculator.operator = input;
+    }
     else if ((["+", "-", "*", "/"].includes(input)) && (calculator.op_change === true)) {
         display.textContent = operate(+calculator.a, +calculator.b, calculator.operator);
         calculator.a = display.textContent;
