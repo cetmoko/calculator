@@ -33,7 +33,13 @@ const clear = function() {
 }
 
 const get_from_display = function(input) {
-    if (([0,1,2,3,4,5,6,7,8,9].includes(+input)) && (calculator.op_change === false)) {
+    if (([0,1,2,3,4,5,6,7,8,9].includes(+input)) && (calculator.op_change === false) && (display.textContent !== "") && (calculator.operator === "=")) {
+        calculator.text = "";
+        display.textContent = input;
+        calculator.a = input;
+        calculator.operator = "";
+    }
+    else if (([0,1,2,3,4,5,6,7,8,9].includes(+input)) && (calculator.op_change === false)) {
         display.textContent += input;
         calculator.a += input;
     }
@@ -49,7 +55,7 @@ const get_from_display = function(input) {
     }
     else if (input === "=") {
         display.textContent = operate(+calculator.a, +calculator.b, calculator.operator);
-        calculator.operator = "";
+        calculator.operator = "=";
         calculator.op_change = false;
         calculator.a = display.textContent;
 
