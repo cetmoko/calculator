@@ -12,9 +12,9 @@ const operate = function(a, b, operator) {
             return a*b;
         case "/":
             if (b === 0) {
-                return "wtf are you doing bruh?? press clear to continue";
+                return "Error: Zero Division! Press AC to continue";
             } else {
-                return a/b;
+                return Math.round(((a/b) * 1000000000)) / 1000000000;
             };
     }
 }
@@ -75,10 +75,11 @@ for (i = 0; i < 10; i++) {
     container.append(numButton)
 }
 
-operations = {"+": "+", "-": "-", "×": "*", "÷": "/", "=": "=", "CLEAR": "clear"}
+operations = {"+": "+", "-": "-", "×": "*", "÷": "/", "=": "=", "AC": "clear"}
 for (const key in operations) {
     const opButton = document.createElement('button');
     opButton.textContent = key;
+    opButton.setAttribute("style", "background-color: orange;")
     opButton.addEventListener('click', function() {get_from_display(operations[key])})
     container.append(opButton)
 }

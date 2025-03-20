@@ -1,20 +1,30 @@
 #container {
     display: flex; 
-    height: 550px; 
+    height: 600px; 
     width: 400px; 
-    border: 2px solid black; 
-    margin: auto; 
+    border: 1px solid black; 
+    margin: 150px auto;
     flex-wrap: wrap;
     gap: 0px 10px;
     align-items: center;
     justify-content: center;
     padding: 10px;
+    border-radius: 15px;
+    background-color: rgb(159, 177, 213);
 }
 .display {
-    display: flex;
-    height: 100px;
+    text-align: right;
+    height: 135px;
     width: 400px;
-    margin: 20px 20px;
+    margin: 5px 10px;
+    padding-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    border: 1px solid black; 
+    border-radius: 15px;
+    padding: 20px 20px;
+    background-color: white;
+    text-wrap: wrap;
 }
 
 button {
@@ -22,10 +32,9 @@ button {
     height: 80px;
     width: 80px;
     margin: 0px 5px;
-}
-
-.header {
+    border-radius: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
     text-align: center;
-    padding-top: 30px;
-    padding-bottom: 60px;
+    padding: 5px 7px;
 }
